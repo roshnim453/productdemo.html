@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9cf12a211e.js" crossorigin="anonymous"></script>
+
+    <title>product page</title>
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        
+        .cover {
+            background-color: #f9f9f9;
+        }
+        
+        .slider {
+            width: 100%;
+            height: 400px;
+            background-color: #f3c2c5;
+        }
+        
+        .slid-content {
+            padding: 50px;
+            display: flex;
+            text-align: left;
+            flex-direction: column;
+            width: 50%;
+        }
+        
+        .slid-content h4 {
+            margin-top: 50px;
+            font-size: 1.5rem;
+            text-align: left;
+            letter-spacing: 20px;
+            color: #7a7979;
+        }
+        
+        .slid-content h2 {
+            margin-top: ;
+            font-size: 3.5rem;
+            color: #222222;
+        }
+        
+        .slid-content button {
+            width: 30%;
+            margin-left: 20px;
+            margin-top: 20px;
+            padding: 15px;
+            color: #ffdcd9;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            background-color: #ff4c3b;
+        }
+        
+        .header {
+            margin-top: -50px;
+            box-shadow: 0px 5px 10px 2px #fefefe;
+            bottom: none;
+            position: relative;
+            background-color: #fefefe;
+            margin-left: 135px;
+            height: 250px;
+            width: 80%;
+        }
+        
+        h1 {
+            text-align: center;
+            text-transform: capitalize;
+            color: #222222;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        #border {
+            background-color: #ff7568;
+            margin: auto;
+            height: 3px;
+            width: 10%;
+        }
+        
+        p {
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+            padding-top: 30px;
+            color: #ff4c3b;
+        }
+        
+        h4 {
+            text-align: center;
+            margin-top: 30px;
+            color: #879186;
+        }
+        
+        #container {
+            width: 80%;
+            height: 100%;
+            border-top: none;
+            box-shadow: 0px 5px 10px 2px #fefefe;
+            background-color: #fefefe;
+            margin: auto;
+            padding-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .card {
+            width: 400px;
+            height: 700px;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-image {
+            background-color: #879186;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 300px;
+            margin-top: 25px;
+        }
+        
+        .icon {
+            top: 30%;
+            right: -50px;
+            width: 25%;
+            background-color: #f3c2c5;
+            padding: 10px;
+            position: absolute;
+            transition: 1s linear;
+        }
+        
+        .icon a {
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(0, 0, 122);
+            margin: 5px 3px;
+        }
+        
+        .icon a:hover {
+            color: red;
+        }
+        
+        .card:hover .icon {
+            right: 5px;
+            opacity: 0.9;
+            color: rgb(0, 0, 122);
+        }
+        
+        .stars i {
+            font-weight: 900;
+            color: #ffa200;
+        }
+        
+        .info {
+            margin-top: 50px;
+            height: 200px;
+            text-align: center;
+            background-color: #fefefe;
+        }
+        
+        .info p {
+            margin-top: ;
+            text-align: center;
+            margin-left: 10px;
+            color: #879186;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .info span {
+            color: #707070;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        
+        .info h2 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        .info button {
+            width: 50%;
+            height: 20%;
+            border: none;
+            margin-top: 20px;
+            background-color: #ff4c3b;
+            color: black;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 5px 5px #f3c2c5;
+            transition: 1s linear;
+        }
+        
+        button:hover {
+            transform: scale(0.9, 0.9);
+        }
+        
+        .footer {
+            width: 100%;
+            height: 400px;
+            background-color: f9f9f9;
+        }
+        
+        .con h3 {
+            padding-top: 70px;
+            margin-left: 10%;
+            color: #3c3c3c;
+        }
+        
+        .con p {
+            margin-left: -48%;
+            margin-top: -20px;
+            color: #959595;
+        }
+        
+        .line {
+            width: 1.3px;
+            height: 20%;
+            margin-top: -70px;
+            margin-left: 55%;
+            background-color: #dddddd;
+        }
+        
+        .bottom {
+            width: 82%;
+            height: 1.5px;
+            margin-left: 9%;
+            margin-top: 3%;
+            background-color: #dddddd;
+        }
+        
+        .ftcontent {
+            display: flex;
+        }
+        
+        .ftcontent h2 {
+            margin-bottom: 20px;
+        }
+        
+        .account {
+            padding-top: 50px;
+            margin-left: 10%;
+        }
+        
+        .account ul li {
+            padding: 5px;
+            text-decoration: none;
+            text-decoration-style: none;
+        }
+        
+        .service {
+            padding-top: 50px;
+            margin-left: 10%;
+        }
+        
+        .service ul li {
+            padding: 5px;
+            text-decoration: none;
+            text-decoration-style: none;
+        }
+        
+        address {
+            padding-top: 50px;
+            margin-left: 10%;
+        }
+        
+        @media only screen and (min-width:300px) and (max-width:600px) {
+            .card {
+                width: 300px;
+            }
+        }
+        
+        @media only screen and (min-width:601px) and (max-width:800px) {
+            .card {
+                width: 350px;
+            }
+        }
+        
+        @media only screen and (min-width:801px) {
+            .card {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cover">
+        <div class="slider">
+            <div class="slid-content">
+                <h4>20% Off</h4>
+                <h2>TOP COLLECTION</h2>
+                <button>SHOP NOW</button>
+            </div>
+
+        </div>
+        <div class="header">
+            <p>Special Offer </p>
+
+            <h1> TOP COLLECTION </h1>
+            <div id="border"></div>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Numquam in voluptatem repudiandae excepturi. <br>Necessitatibus, aperiam eaque ex est rerum debitis.</h4>
+        </div>
+
+        <section id="container">
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="jacket1.jpg" alt="oppss...">
+
+                    <div class="icon">
+                        <a href="#" class="far fa-heart"></a>
+                        <a href="#" class="far fa-share-square"></a>
+                        <a href="#" class="fas fa-cart-plus"></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h2>Denim Women Jacket</h2>
+                    <span>1200rs/-</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio!</p>
+                    <button>
+                    Buy now    
+                      </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="jacket2.jpg" alt="oppss...">
+                    <div class="icon">
+
+                        <a href="#" class="far fa-heart"></a>
+                        <a href="#" class="far fa-share-square"></a>
+                        <a href="#" class="fas fa-cart-plus"></a>
+                    </div>
+
+                </div>
+                <div class="info">
+                    <div class="stars">
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h2> Women Jacket</h2>
+                    <span>1200rs/-</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio!</p>
+                    <button>
+                    Buy now    
+                        </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="j3.jpg" alt="oppss...">
+                    <div class="icon">
+
+
+                        <a href="#" class="far fa-heart"></a>
+                        <a href="#" class="far fa-share-square"></a>
+                        <a href="#" class="fas fa-cart-plus"></a>
+
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="stars">
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <h2>man's jacket</h2>
+                    <span>1200rs/-</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio!</p>
+                    <button>
+                    Buy now    
+                        </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="j4.jpg" alt="oppss...">
+                    <div class="icon">
+
+                        <a href="#" class="far fa-heart"></a>
+                        <a href="#" class="far fa-share-square"></a>
+                        <a href="#" class="fas fa-cart-plus"></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="stars">
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h2>man's jacket</h2>
+                    <span>1200rs/-</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio!</p>
+                    <button>
+                    Buy now   
+                         </button>
+
+                </div>
+
+            </div>
+
+
+        </section>
+        <div class="footer">
+            <div class="con">
+                <h3>
+                    KNOWS IT ALL FIRST
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+
+            </div>
+            <div class="line"></div>
+            <div class="mail">
+            </div>
+            <div class="bottom"></div>
+
+            <div class="ftcontent">
+                <div class="account">
+                    <h2>ACCOUNT</h2>
+                    <ul>
+                        <li>Mens</li>
+                        <li>Womens</li>
+                        <li>Clothing</li>
+                        <li>Accessories</li>
+                        <li>Featured</li>
+
+
+                    </ul>
+                </div>
+                <div class="service">
+                    <h2>WHY WE CHOOSE</h2>
+                    <ul>
+                        <li>Mens</li>
+                        <li>Womens</li>
+                        <li>Clothing</li>
+                        <li>Accessories</li>
+                        <li>Featured</li>
+
+
+                    </ul>
+                </div>
+
+                <address>
+                <h2>STORE INFORMATION</h2>
+                
+
+            </address>
+            </div>
+        </div>
+</body>
+
+</html>
